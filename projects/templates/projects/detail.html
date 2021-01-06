@@ -1,0 +1,28 @@
+{% extends 'projects/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="row" style="justify-content: center;">
+    <div class="card mb-3" style="padding:20px; margin:20px; margin-top: 60px; width:600px; ">
+        <img
+          src="{% static project.image %}" alt="{{ project.description }}"
+          class="card-img-top"
+        />
+        <div class="card-body text-center">
+          <h5 class="card-title text-center">{{ project.title }}</h5>
+          <p class="card-text text-center">{{ project.description }}
+          </p>
+          <p class="card-text text-center">
+            <small class="text-muted"><strong><em>{{ project.technology }}</em></strong></small>
+          </p>
+          <div class="my-2 my-lg-0">
+            
+          <a href="/projects" class="btn btn-sm btn-outline-primary my-2 my-sm-0">Back To Home Page</a>
+            
+        </div>
+        </div>
+        
+      </div>
+    </div>
+
+{% endblock %}
